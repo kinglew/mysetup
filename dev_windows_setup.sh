@@ -18,7 +18,7 @@ choco install ccleaner -y
 choco install keepass.install -y
 choco install virtualbox -y
 
-choco install Evernote -y
+#choco install Evernote -y
 choco install velocity -y
 
 ## dev tools
@@ -28,16 +28,17 @@ choco install NugetPackageExplorer -y
 choco install brackets -y
 choco install nodejs -y
 choco install phantomjs -y
-choco install webpi -y
-choco install python -y
+#choco install webpi -y
+#choco install python -y
 choco install webstorm -y
-choco install visualstudio2015community -y
-choco install intellijidea-community -y
+#choco install visualstudio2015community -y
+#choco install intellijidea-community -y
 choco install sourcetree -y
 
 #install apps from webpi
-choco install WindowsInstaller31 -source webpi
-choco install WindowsInstaller45 -source webpi
+
+#choco install WindowsInstaller31 -source webpi
+#choco install WindowsInstaller45 -source webpi
 
 ######################################################
 # Install npm packages
