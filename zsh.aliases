@@ -1,0 +1,6 @@
+alias nbi='npm install && bower install'
+alias vi=vim
+alias zshrc='cat ~/.zshrc'
+alias vzshrc='vi ~/.zshrc'
+alias vohmyzsh='vi ~/.oh-my-zsh/oh-my-zsh.sh'
+alias hsi='history | grep -i '

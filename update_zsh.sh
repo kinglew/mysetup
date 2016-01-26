@@ -29,7 +29,10 @@ done
 grep -q '^work' ~/.zshrc || echo "work" >> ~/.zshrc
 
 #modify zsh plugins
-sed -i 's/^plugins=.*/plugins=(git z jump)/' ~/.zshrc
+sed -i 's/^plugins=.*/plugins=(git z jump sublime)/' ~/.zshrc
 
 #git store credentials
 #uname | (grep -q '^CYGWIN' && echo 'hello') || echo 'nono'
+
+cp zsh.aliases ~/.oh-my-zsh/zsh.aliases
+grep -q '^source.$ZSH.*aliases' ~/.zshrc && sed -i 's@^source.$ZSH.*aliases@source $ZSH/zsh.aliases@' ~/.zshrc || echo 'source $ZSH/zsh.aliases' >> ~/.zshrc
