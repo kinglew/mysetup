@@ -36,8 +36,8 @@ choco install intellijidea-community -y
 choco install sourcetree -y
 
 #install apps from webpi
-choco install WindowsInstaller31 -source webpi
-choco install WindowsInstaller45 -source webpi
+#choco install WindowsInstaller31 -source webpi
+#choco install WindowsInstaller45 -source webpi
 
 ######################################################
 # Install npm packages
