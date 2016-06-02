@@ -24,20 +24,14 @@ choco install velocity -y
 ## dev tools
 choco install jdk8 -y
 choco install vagrant -y
-choco install NugetPackageExplorer -y
-choco install brackets -y
+choco install atom -y
 choco install nodejs -y
 choco install phantomjs -y
-choco install webpi -y
 choco install python -y
 choco install webstorm -y
 choco install visualstudio2015community -y
-choco install intellijidea-community -y
+choco install intellijidea-ultimate -y
 choco install sourcetree -y
-
-#install apps from webpi
-#choco install WindowsInstaller31 -source webpi
-#choco install WindowsInstaller45 -source webpi
 
 ######################################################
 # Install npm packages
