@@ -1,11 +1,9 @@
-
 ## pre-req: babun(w/ git) and chocolatey installed. this should be executed from babun (run as administrator)
 
 ######################################################
 # Install apps using Chocolatey
 ######################################################
-echo "Installing applications from Chocolatey"
-choco install sublimetext3 -y
+echo "Installing applications using Chocolatey"
 choco install winscp -y
 choco install GoogleChrome -y
 choco install fiddler4 -y
@@ -16,27 +14,28 @@ choco install paint.net -y
 choco install listary -y
 choco install ccleaner -y
 choco install keepass.install -y
-choco install virtualbox -y
-
 choco install Evernote -y
-choco install velocity -y
 
 ## dev tools
-choco install jdk8 -y
+choco install velocity -y
+choco install boot2docker -y
+choco install boxstarter -y
 choco install vagrant -y
-choco install atom -y
+choco install sourcetree -y
+
+## dev frameworks
+choco install jdk8 -y
 choco install nodejs -y
 choco install phantomjs -y
 choco install python -y
 choco install webstorm -y
-choco install visualstudio2015community -y
+#choco install visualstudio2015community -y
 choco install intellijidea-ultimate -y
-choco install sourcetree -y
 
 ######################################################
 # Install npm packages
 ######################################################
-npm install -g yo gulp karma bower jshint nodemon generator-gulp-angular
+npm install -g yo gulp karma protractor bower jshint nodemon generator-gulp-angular angular-cli react-native-cli typings
 
 ######################################################
 # Generate public/private rsa key pair
@@ -49,3 +48,6 @@ npm install -g yo gulp karma bower jshint nodemon generator-gulp-angular
 #$filersa = $dirssh + "\id_rsa"
 #ssh-keygen -t rsa -f $filersa -q -C $userEmail
 #Write-Host
+
+chmod +x update_zsh.sh
+./update_zsh.sh
