@@ -4,3 +4,10 @@ alias zshrc='cat ~/.zshrc'
 alias vzshrc='vi ~/.zshrc'
 alias vohmyzsh='vi ~/.oh-my-zsh/oh-my-zsh.sh'
 alias hsi='history | grep -i '
+
+#more git aliases for rebase triangular flow
+function git_branch_upstream_master() {
+  git checkout -b $1 upstream/master
+}
+alias gub='git_branch_upstream_master'
+alias gur='gup'
