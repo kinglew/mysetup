@@ -31,10 +31,12 @@ grep -q '^work' ~/.zshrc || echo "work" >> ~/.zshrc
 #modify zsh plugins
 sed -i 's/^plugins=.*/plugins=(git z jump sublime)/' ~/.zshrc
 
-#git store credentials
-#uname | (grep -q '^CYGWIN' && echo 'hello') || echo 'nono'
-
+#update aliases
 cp zsh.aliases ~/.oh-my-zsh/zsh.aliases
-grep -q '^source.$ZSH.*aliases' ~/.zshrc && sed -i 's@^source.$ZSH.*aliases@source $ZSH/zsh.aliases@' ~/.zshrc || echo 'source $ZSH/zsh.aliases' >> ~/.zshrc
 source ~/.oh-my-zsh/zsh.aliases
+
+#make sure aliases are reloaded at startup
+grep -q '^source.$ZSH.*aliases' ~/.zshrc || echo 'source $ZSH/zsh.aliases' >> ~/.zshrc
+grep -q '^source ~/.bash_profile' ~/.zshrc || echo 'source ~/.bash_profile' >> ~/.zshrc
+
 echo "updated and reloaded zsh.aliases"
