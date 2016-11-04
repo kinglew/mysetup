@@ -25,7 +25,7 @@ esac
 shift # past argument or value
 done
 
-(grep -q '^alias work' ~/.zshrc && sed -i 's/^alias.work=.*/alias work="cd __HOME_DIR__"/' ~/.zshrc && sed -i "s@__HOME_DIR__@$HOME_DIR@" ~/.zshrc) || echo "alias work=\"$HOME_DIR\"" >> ~/.zshrc
+(grep -q '^alias work' ~/.zshrc && sed -i 's/^alias.work=.*/alias work="cd __HOME_DIR__"/' ~/.zshrc && sed -i "s@__HOME_DIR__@$HOME_DIR@" ~/.zshrc) || echo "alias work=\"cd $HOME_DIR\"" >> ~/.zshrc
 grep -q '^work' ~/.zshrc || echo "work" >> ~/.zshrc
 
 #modify zsh plugins

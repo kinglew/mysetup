@@ -24,6 +24,7 @@ choco install velocity -y
 ## dev tools
 choco install jdk8 -y
 choco install vagrant -y
+choco install nuget.commandline -y
 choco install NugetPackageExplorer -y
 choco install brackets -y
 choco install nodejs -y
