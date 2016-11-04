@@ -1,8 +1,14 @@
-alias nbi='npm install && bower install'
-alias vi=vim
+#ready zsh configs
 alias zshrc='cat ~/.zshrc'
+alias zshalias='cat ~/.oh-my-zsh/zsh.aliases'
+
+#edit zsh config files
 alias vzshrc='vi ~/.zshrc'
 alias vohmyzsh='vi ~/.oh-my-zsh/oh-my-zsh.sh'
+
+#useful aliases
+alias nbi='npm install && bower install'
+alias vi=vim
 alias hsi='history | grep -i '
 
 #more git aliases for rebase triangular flow

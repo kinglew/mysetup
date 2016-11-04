@@ -6,24 +6,24 @@
 # as in the --default example).
 # note: if this is set to > 0 the /etc/hosts part is not recognized ( may be a bug )
 
-HOME_DIR=/cygdrive/d
+if [[ -z "$WORK_DIR" ]];
+then
+  work_directory="/cygdrive/d"
+  echo -n "Enter path to work directory below: (default: /cygdrive/d)"
+  read work
+  if [[ -z "$work" ]];
+  then
+    echo "using default: $work_directory"
+  else
+    echo "a $work"
+    work_directory=$work
+  fi
+  (grep -q '^export WORK_DIR=' ~/.bash_profile && sed -i 's/^export WORK_DIR=.*/export WORK_DIR=__TOKEN__/' ~/.bash_profile && sed -i "s@__TOKEN__@$work_directory@" ~/.bash_profile) || echo "export WORK_DIR=$work_directory" >> ~/.bash_profile
+  source ~/.bash_profile
+fi
 
-while [[ $# > 1 ]]
-do
-key="$1"
-
-case $key in
-    -h|-home|--home)
-    HOME_DIR="$2"
-    shift # past argument
-    ;;
-
-    *)
-            # unknown option
-    ;;
-esac
-shift # past argument or value
-done
+HOME_DIR=$WORK_DIR
+echo "work directory set to $HOME_DIR"
 
 (grep -q '^alias work' ~/.zshrc && sed -i 's/^alias.work=.*/alias work="cd __HOME_DIR__"/' ~/.zshrc && sed -i "s@__HOME_DIR__@$HOME_DIR@" ~/.zshrc) || echo "alias work=\"cd $HOME_DIR\"" >> ~/.zshrc
 grep -q '^work' ~/.zshrc || echo "work" >> ~/.zshrc
@@ -36,3 +36,5 @@ sed -i 's/^plugins=.*/plugins=(git z jump sublime)/' ~/.zshrc
 
 cp zsh.aliases ~/.oh-my-zsh/zsh.aliases
 grep -q '^source.$ZSH.*aliases' ~/.zshrc && sed -i 's@^source.$ZSH.*aliases@source $ZSH/zsh.aliases@' ~/.zshrc || echo 'source $ZSH/zsh.aliases' >> ~/.zshrc
+source ~/.oh-my-zsh/zsh.aliases
+echo "updated and reloaded zsh.aliases"
