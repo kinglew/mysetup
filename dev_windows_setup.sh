@@ -19,6 +19,7 @@ choco install paint.net -y
 choco install listary -y
 choco install ccleaner -y
 choco install keepass.install -y
+choco install conemu -y
 
 ## dev tools
 choco install velocity -y
