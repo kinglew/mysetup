@@ -26,12 +26,12 @@ alias vscode=code
 function git_prune() {
   if [ -z $1 ];
   then
-    git branch -r --merged | grep -v master | sed 's/upstream\///' | xargs -n 1 git push --delete origin
+    git branch -r --merged | grep -v master | sed 's/upstream\///' | xargs git branch -d | xargs -n 1 git push --delete origin
   else
-    git branch -r --merged | grep -v master | sed 's/$1\///' | xargs -n 1 git push --delete origin
+    git branch -r --merged | grep -v master | sed 's/$1\///' | xargs git branch -d | xargs -n 1 git push --delete origin
   fi;
 }
 alias gprune='git_prune'
 
 #git rename
-alias grename=git branch -m $1
+alias grename='git branch -m $1'
