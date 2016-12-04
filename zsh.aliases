@@ -17,3 +17,21 @@ function git_branch_upstream_master() {
 }
 alias gub='git_branch_upstream_master'
 alias gur='gup'
+
+#visual studio code editor
+alias vsc=code
+alias vscode=code
+
+#git prune
+function git_prune() {
+  if [ -z $1 ];
+  then
+    git branch -r --merged | grep -v master | sed 's/upstream\///' | xargs -n 1 git push --delete origin
+  else
+    git branch -r --merged | grep -v master | sed 's/$1\///' | xargs -n 1 git push --delete origin
+  fi;
+}
+alias gprune='git_prune'
+
+#git rename
+alias grename=git branch -m $1
