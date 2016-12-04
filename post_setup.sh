@@ -1,4 +1,5 @@
 #source ~/.bashrc
+#shell needs to be reloaded before executing this
 
 if [[ $(uname) =~ ^CYGWIN ]];
 then
