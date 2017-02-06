@@ -18,6 +18,7 @@ choco upgrade ccleaner -y
 choco upgrade keepass.upgrade -y
 choco upgrade conemu -y
 choco upgrade switcheroo -y
+choco upgrade procexp -y
 
 ## dev tools
 choco upgrade velocity -y
