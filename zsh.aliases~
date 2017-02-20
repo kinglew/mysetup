@@ -1,0 +1,19 @@
+#ready zsh configs
+alias zshrc='cat ~/.zshrc'
+alias zshalias='cat ~/.oh-my-zsh/zsh.aliases'
+
+#edit zsh config files
+alias vzshrc='vi ~/.zshrc'
+alias vohmyzsh='vi ~/.oh-my-zsh/oh-my-zsh.sh'
+
+#useful aliases
+alias nbi='npm install && bower install'
+alias vi=vim
+alias hsi='history | grep -i '
+
+#more git aliases for rebase triangular flow
+function git_branch_upstream_master() {
+  git checkout -b $1 upstream/master
+}
+alias gub='git_branch_upstream_master'
+alias gur='gup'

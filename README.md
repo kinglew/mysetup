@@ -14,3 +14,11 @@ my development environment setup scripts, configs, settings, style/formatters, .
 choco install babun -y
 3.  set babun to run as administrator (find binary file, properties, run as administrator)  
 4.  execute ./dev_windows_setup.sh  
+
+# known issues
+
+## visual studio code + babun git
+- create symlink for "c:\cygdrive"
+mklink /j "c:\cygdrive" C:\Users\{user}\.babun\cygwin\home
+- if your workspace is not in your home, them remap it (example below assumes that workspace is in d: drive)
+mklink /j "C:\Users\{user}\.babun\cygwin\home\d" "D:"

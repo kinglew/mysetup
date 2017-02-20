@@ -1,0 +1,4 @@
+{
+    "terminal.integrated.shell.windows": "C:\\Users\\King Lew\\.babun\\cygwin\\bin\\bash.exe",
+    "terminal.integrated.shellArgs.windows": ["--login", "-i"]
+}
