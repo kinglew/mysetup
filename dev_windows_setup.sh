@@ -1,6 +1,11 @@
 ## pre-req: babun(w/ git) and chocolatey installed. this should be executed from babun (run as administrator)
 command -v choco2 >/dev/null 2>&1 || { echo >&2 "ERROR: chocolatey not installed"; exit 1; }
 
+echo "Create symbolic links" #$userprofile_path
+userprofile_path=$(printenv | grep USERPROFILE | sed s/USERPROFILE=//)
+mklink_cmd="mklink /j c:\kl_userprofile \"$userprofile_path\""
+cmd.exe /c "$mklink_cmd"
+
 ######################################################
 # Install/Upgrade apps using Chocolatey
 ######################################################
@@ -32,7 +37,6 @@ choco upgrade nodist -y
 choco upgrade phantomjs -y
 choco upgrade python -y
 choco upgrade nuget.commandline -y
-choco upgrade NugetPackageExplorer -y
 choco upgrade golang -y
 
 ## dev IDEs
