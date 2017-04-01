@@ -8,6 +8,15 @@ then
 else
   git config --global credential.helper cache ;
 fi
+echo "Git credential helper set"
+
+cp ./git_global_attributes ~/.gitattributes
+git config --global core.attributesfile '~/.gitattributes'
+echo "Updated and set git global attributes"
+
+cp ./git_global_ignore ~/.gitignore
+git config --global core.excludesfile '~/.gitignore'
+echo "Updated and set git global ignore"
 
 ######################################################
 # Install/Update npm packages
