@@ -6,6 +6,14 @@ userprofile_path=$(printenv | grep USERPROFILE | sed s/USERPROFILE=//)
 mklink_cmd="mklink /j c:\kl_userprofile \"$userprofile_path\""
 cmd.exe /c "$mklink_cmd"
 
+echo "Adding embed.bat for babun embedded terminal mode"
+if ls /cygdrive/c/kl_userprofile/.babun/embed.bat 1> /dev/null 2>&1; then
+    echo "Babun embed.bat already exists. Ignore."
+else
+    cp ./windows/embed.bat /cygdrive/c/kl_userprofile/.babun/embed.bat
+    echo "Added .babun/embed.bat"
+fi
+
 ######################################################
 # Install/Upgrade apps using Chocolatey
 ######################################################
