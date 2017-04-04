@@ -22,7 +22,7 @@ echo "Updated and set git global ignore"
 # Install/Update npm packages
 ######################################################
 echo "Installing/Updating npm packages..."
-npm update -g yo gulp karma protractor jshint nodemon generator-gulp-angular angular-cli react-native-cli typings
+npm update -g yo gulp karma protractor eslint nodemon yarn react-native-cli typings
 
 ######################################################
 # Update zsh aliases
