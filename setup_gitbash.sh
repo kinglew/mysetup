@@ -15,8 +15,8 @@ bash-it enable plugin autojump aws git extract
 
 bash-it enable alias git curl
 
-# TODO set theme to minimal
-#export BASH_IT_THEME='minimal'
+# set theme to minimal
+sed -i 's/^BASH_IT_THEME=.*/BASH_IT_THEME="minimal"/' ~/.bashrc
 
 # TODO disable git status on theme
 #export SCM_GIT_SHOW_DETAILS=false
@@ -25,4 +25,3 @@ bash-it enable alias git curl
 # copy custom aliases
 cp ./zsh/git.plugin.zsh /bash_it/aliases/custom.aliases.bash
 cat ./zsh.aliases >> /bash_it/aliases/custom.aliases.bash
-
