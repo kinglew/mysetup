@@ -32,7 +32,7 @@ sed -i 's/^BASH_IT_THEME=.*/BASH_IT_THEME="minimal"/' ~/.bashrc
 
 # copy custom aliases
 cp ./zsh/git.plugin.zsh /bash_it/aliases/custom.aliases.bash
-cat ./zsh.aliases >> /bash_it/aliases/custom.aliases.bash
+cat .aliases >> /bash_it/aliases/custom.aliases.bash
 
 
 # refresh
