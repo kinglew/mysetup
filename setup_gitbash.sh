@@ -1,13 +1,21 @@
 # install bash-it (for git-bash)
 if ! [ -x "$(command -v bash-it)" ]; then
-    echo "Installing bash-it ..."
+
+    net session > /dev/null 2>&1
+    if [ $? -eq 0 ];
+    then echo "Installing bash-it ..."
+    else echo "Need to run shell as administrator to install bash-it"; exit 1;
+    fi
+
     git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it
 
+    # create symlink to avoid issues with spaces in user paths
     ln -s ~/.bash_it /bash_it
 
     /bash_it/install.sh --silent
 
-    reload
+    # make bash-it command available by refreshing shell
+    source ~/.bashrc
 fi
 
 bash-it enable plugin autojump aws git extract
@@ -25,3 +33,7 @@ sed -i 's/^BASH_IT_THEME=.*/BASH_IT_THEME="minimal"/' ~/.bashrc
 # copy custom aliases
 cp ./zsh/git.plugin.zsh /bash_it/aliases/custom.aliases.bash
 cat ./zsh.aliases >> /bash_it/aliases/custom.aliases.bash
+
+
+# refresh
+reload
