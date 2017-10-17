@@ -1,6 +1,6 @@
 # install bash-it (for git-bash)
-if ! [ -x "$(command -v bash-it)" ]; then
-
+#if ! [ -x "$(command -v bash-it)" ]; then
+if ! [ -d "/bash_it" ]; then
     net session > /dev/null 2>&1
     if [ $? -eq 0 ];
     then echo "Installing bash-it ..."
