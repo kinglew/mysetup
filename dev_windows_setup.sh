@@ -31,3 +31,10 @@ choco upgrade golang -y
 ## dev IDEs
 choco upgrade visualstudiocode -y
 choco upgrade intellijidea-ultimate -y
+
+## do bash-it setup
+./setup_gitbash.sh
+
+## do configuration setup
+./post_setup.sh
+
