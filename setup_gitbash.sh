@@ -18,7 +18,7 @@ if ! [ -d "/bash_it" ]; then
     source ~/.bashrc
 fi
 
-bash-it enable plugin autojump aws git extract
+bash-it enable plugin autojump aws git extract z fzf
 #fasd - not compatible with windows
 
 bash-it enable alias git curl

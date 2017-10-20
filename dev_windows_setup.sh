@@ -22,6 +22,7 @@ choco upgrade procexp -y
 choco upgrade boxstarter -y
 choco upgrade vagrant -y
 choco upgrade postman -y
+choco upgrade fzf -y
 
 ## dev frameworks
 choco upgrade nodist -y
