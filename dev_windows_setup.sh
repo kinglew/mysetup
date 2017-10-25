@@ -23,6 +23,7 @@ choco upgrade boxstarter -y
 choco upgrade vagrant -y
 choco upgrade postman -y
 choco upgrade fzf -y
+choco upgrade peco -y
 
 ## dev frameworks
 choco upgrade nodist -y
