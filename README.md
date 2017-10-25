@@ -1,24 +1,21 @@
 # mysetup
-my development environment setup scripts, configs, settings, style/formatters, ...
+my development environment setup scripts, dotfiles, etc...
+
+Current setup for windows using git bash shell and bash-it.
 
 # windows setup
 
 ## pre-requisites
-- set HOME environment variable to %USERPROFILE%
-- make sure 'cmd' is always run as administrator
+- install windows git which comes with git bash
 
 ## steps
 1. install chocolatey  
 @powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
-2. install babun via chocolatey:  
-choco install babun -y
-3.  set babun to run as administrator (find binary file, properties, run as administrator)  
-4.  execute ./dev_windows_setup.sh  
+2. run git bash as administrator
+3. execute ./dev_windows_setup.sh  
+4. restart shell, then execute ./setup_gitbash.sh
+5. restart shell to have all bash-it plugins loading properly
 
 # known issues
 
-## visual studio code + babun git
-- create symlink for "c:\cygdrive"
-mklink /j "c:\cygdrive" C:\Users\{user}\.babun\cygwin\home
-- if your workspace is not in your home, them remap it (example below assumes that workspace is in d: drive)
-mklink /j "C:\Users\{user}\.babun\cygwin\home\d" "D:"
+1. because of path issues with spaces, it is recommended to create symlinks from root folder. /bash_it for example points to ~/.bash_it, issue is that username in windows can contain spaces and this will crash bash_it !!
