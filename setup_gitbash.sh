@@ -19,16 +19,13 @@ if ! [ -d "/bash_it" ]; then
 fi
 
 bash-it enable plugin autojump aws git extract z fzf
-#fasd - not compatible with windows
-
 bash-it enable alias git curl
 
 # set theme to minimal
-sed -i 's/^BASH_IT_THEME=.*/BASH_IT_THEME="minimal"/' ~/.bashrc
-
-# TODO disable git status on theme
-#export SCM_GIT_SHOW_DETAILS=false
-#export SCM_GIT_IGNORE_UNTRACKED=true
+sed -i 's/^export BASH_IT_THEME=.*/export BASH_IT_THEME="minimal"/' ~/.bashrc
+sed -i 's/^export SCM_CHECK=.*/export SCM_CHECK=true/' ~/.bashrc
+sed -i 's/^export SCM_GIT_SHOW_DETAILS=.*/export SCM_GIT_SHOW_DETAILS=true/' ~/.bashrc
+sed -i 's/^export SCM_GIT_IGNORE_UNTRACKED=.*/export SCM_GIT_IGNORE_UNTRACKED=true/' ~/.bashrc
 
 # copy custom aliases
 cp ./zsh/git.plugin.zsh /bash_it/aliases/custom.aliases.bash
@@ -52,5 +49,16 @@ cp ./git_global_ignore ~/.gitignore
 git config --global core.excludesfile '~/.gitignore'
 echo "Updated and set git global ignore"
 
-# refresh
-reload
+if grep -Fq "bash_it_override.sh" ~/.bash_profile
+then
+  echo "no need to modify bash_profile for bash_it_override.sh"
+else
+  echo "test -f ~/.bash_it_override.sh && ~/.bash_it_override.sh" >> ~/.bash_profile
+fi
+cp ./bash_it_override.sh ~/.bash_it_override.sh
+echo "Updated ~/.bash_it_override.sh"
+
+
+
+#refresh bash_profile
+source ~/.bash_profile
