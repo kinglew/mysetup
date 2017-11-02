@@ -9,10 +9,10 @@ Current setup for windows using git bash shell and bash-it.
 - install windows git which comes with git bash
 
 ## steps
-1. install chocolatey  
+1. install chocolatey
 @powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
 2. run git bash as administrator
-3. execute ./dev_windows_setup.sh  
+3. execute ./dev_windows_setup.sh
 4. restart shell, then execute ./setup_gitbash.sh
 5. restart shell to have all bash-it plugins loading properly
 
