@@ -33,7 +33,7 @@ cat .aliases >> /bash_it/aliases/custom.aliases.bash
 
 # setup basic git configuration
 echo "Verifying git configs..."
-if [[ $(uname) =~ ^CYGWIN ]];
+if [[ $(uname) =~ ^CYGWIN ]] || [[ $(uname) =~ ^MINGW ]] ;
 then
   git config --global credential.helper store ;
 else
