@@ -34,9 +34,9 @@ choco upgrade golang -y
 choco upgrade visualstudiocode -y
 choco upgrade intellijidea-ultimate -y
 
+choco upgrade awscli -y
+
 ## do bash-it setup
 ./setup_gitbash.sh
 
-## do configuration setup
-./post_setup.sh
 
