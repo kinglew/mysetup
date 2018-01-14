@@ -1,5 +1,5 @@
-## pre-req: babun(w/ git) and chocolatey installed. this should be executed from babun (run as administrator)
-command -v choco2 >/dev/null 2>&1 || { echo >&2 "ERROR: chocolatey not installed"; exit 1; }
+
+command -v choco >/dev/null 2>&1 || { echo >&2 "ERROR: chocolatey not installed"; exit 1; }
 
 ######################################################
 # Install/Upgrade apps using Chocolatey
@@ -32,11 +32,8 @@ choco upgrade golang -y
 
 ## dev IDEs
 choco upgrade visualstudiocode -y
-choco upgrade intellijidea-ultimate -y
 
 ## do bash-it setup
 ./setup_gitbash.sh
 
-## do configuration setup
-./post_setup.sh
 
