@@ -2,3 +2,5 @@
 *.sh~
 *.swp
 kl_todos.md
+.history
+.idea
