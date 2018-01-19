@@ -27,7 +27,7 @@ choco upgrade peco -y
 
 ## dev frameworks
 choco upgrade nodist -y
-choco upgrade python -y
+choco upgrade python2 -y
 choco upgrade golang -y
 
 ## dev IDEs
