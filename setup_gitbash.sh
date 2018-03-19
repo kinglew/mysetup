@@ -15,8 +15,9 @@ if ! [ -d "/bash_it" ]; then
     /bash_it/install.sh --silent
 
     # make bash-it command available by refreshing shell
-    source ~/.bashrc
+#    source ~/.bashrc
 fi
+source ~/.bashrc
 
 bash-it enable plugin autojump aws git extract z fzf
 bash-it enable alias git curl
@@ -33,7 +34,8 @@ cat .aliases >> /bash_it/aliases/custom.aliases.bash
 
 # setup basic git configuration
 echo "Verifying git configs..."
-if [[ $(uname) =~ ^CYGWIN ]] || [[ $(uname) =~ ^MINGW ]] ;
+
+if [[ $(uname) =~ ^CYGWIN ]] || [[ $(uname) =~ ^MINGW ]];
 then
   git config --global credential.helper store ;
 else
