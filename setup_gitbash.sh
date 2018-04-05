@@ -26,7 +26,7 @@ bash-it enable alias git curl
 sed -i 's/^export BASH_IT_THEME=.*/export BASH_IT_THEME="minimal"/' ~/.bashrc
 sed -i 's/^export SCM_CHECK=.*/export SCM_CHECK=true/' ~/.bashrc
 sed -i 's/^export SCM_GIT_SHOW_DETAILS=.*/export SCM_GIT_SHOW_DETAILS=true/' ~/.bashrc
-sed -i 's/^export SCM_GIT_IGNORE_UNTRACKED=.*/export SCM_GIT_IGNORE_UNTRACKED=true/' ~/.bashrc
+sed -i 's/^export SCM_GIT_IGNO RE_UNTRACKED=.*/export SCM_GIT_IGNORE_UNTRACKED=true/' ~/.bashrc
 
 # copy custom aliases
 cp ./zsh/git.plugin.zsh /bash_it/aliases/custom.aliases.bash
@@ -60,7 +60,8 @@ fi
 cp ./bash_it_override.sh ~/.bash_it_override.sh
 echo "Updated ~/.bash_it_override.sh"
 
-
+echo "setup touchcursor"
+cp ./touchcursor/settings.cfg $APPDATA/TouchCursor/settings.cfg
 
 #refresh bash_profile
 source ~/.bash_profile
