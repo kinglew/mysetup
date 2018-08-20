@@ -26,6 +26,7 @@ choco upgrade vagrant -y
 choco upgrade postman -y
 choco upgrade fzf -y
 choco upgrade peco -y
+choco upgrade sift -y
 
 ## dev frameworks
 choco upgrade nodist -y
