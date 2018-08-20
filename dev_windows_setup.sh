@@ -15,8 +15,10 @@ choco upgrade paint.net -y
 choco upgrade listary -y
 choco upgrade ccleaner -y
 choco upgrade conemu -y
-choco upgrade switcheroo -y
 choco upgrade procexp -y
+choco upgrade everything -y
+choco upgrade wox -y
+
 
 ## dev tools
 choco upgrade boxstarter -y
