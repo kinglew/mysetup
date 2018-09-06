@@ -27,6 +27,7 @@ choco upgrade postman -y
 choco upgrade fzf -y
 choco upgrade peco -y
 choco upgrade sift -y
+choco upgrade zeal -y
 
 ## dev frameworks
 choco upgrade nodist -y
