@@ -6,14 +6,12 @@ command -v choco >/dev/null 2>&1 || { echo >&2 "ERROR: chocolatey not installed"
 ######################################################
 
 echo "Installing/Upgrading applications using Chocolatey"
-choco upgrade winscp -y
 choco upgrade GoogleChrome -y
 choco upgrade vivaldi -y
 choco upgrade dropbox -y
 choco upgrade 7zip -y
 choco upgrade paint.net -y
 choco upgrade listary -y
-choco upgrade ccleaner -y
 choco upgrade conemu -y
 choco upgrade procexp -y
 choco upgrade everything -y
