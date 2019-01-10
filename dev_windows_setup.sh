@@ -26,7 +26,7 @@ choco upgrade vagrant -y
 choco upgrade postman -y
 choco upgrade fzf -y
 choco upgrade peco -y
-choco upgrade sift -y
+choco upgrade ripgrep -y
 choco upgrade zeal -y
 
 ## dev frameworks
