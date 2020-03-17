@@ -34,6 +34,7 @@ choco upgrade golang -y
 
 ## dev IDEs
 choco upgrade visualstudiocode -y
+choco upgrade jetbrainsmono -y
 
 choco upgrade awscli -y
 
